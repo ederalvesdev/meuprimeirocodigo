@@ -1,0 +1,63 @@
+programa {
+  funcao inicio() {
+     inteiro opcao, contaDestino
+    real saldo = 0.0, deposito = 0.0, saque = 0.0, transferencia = 0.0
+
+    faca {
+
+    escreva(".....Menu caixa eletronico.....\n"   +
+    "1 - SALDO\n" +
+    "2 - DEPOSITO\n" +
+    "3 - SAQUE\n" +
+    "4 - TRANSFERENCIA\n" +
+    "5 - SAIR\n\n" +
+    "Digite a operaçao desejada  ")
+    leia(opcao)
+    
+    escolha (opcao) {
+
+      caso 1:
+      escreva("Seu saldo e de: R$" + saldo +"\n" )
+      pare
+
+      caso 2:
+      escreva("\n Opcao 2 selecionada\n   Digite o valor que deseja depositar em sua conta:\n ")
+      leia(deposito)
+      saldo = saldo + deposito
+      escreva("Deposito realizado com sucesso. seu novo saldo é: \n R$" + saldo +)
+      pare
+
+      caso 3:
+      escreva("escreva o valor que deseja sacar da conta:   "  )
+      leia(saque)
+      saldo = saldo - saque
+      escreva("saque de R$: " + saque +  "\n saque realizado com sucesso seu novo saldo e de \n R$" + saldo + "\n")
+      pare
+
+      caso 4:
+      escreva("informe numero da conta para transferencia \n" + contaDestino + "\n")
+      leia(contaDestino)
+      escreva("Digite o valor que deseja transferir para conta R$ \n")
+      leia(transferencia)
+
+      saldo = saldo - transferencia
+
+      escreva("transferencia para conta \n" + contaDestino + " \n No valor de \n R$" + transferencia + "\n Seu saldo é de \nR$" + saldo + "\n")
+      pare
+
+    
+
+      caso contrario: 
+      escreva("escolha uma opcao valida imbecil\n \n")
+      pare
+
+    }
+
+    }
+
+    }enquanto(opcao != 5)
+
+    escreva("encerrando o programa")
+}
+     
+    
